@@ -35,7 +35,7 @@ body
 }
 .menu > li:hover
 {
-	background: yellow;
+	background: lightgreen;
 	cursor: pointer;
 }
 .selected
@@ -53,4 +53,25 @@ body
 	width: 620px;
 	margin: auto;
 	border: 1px solid black;
+}
+.cs
+{
+	display: block;
+}
+.accordion-head
+{
+	border: 1px solid red;
+	/*padding-bottom: 0;*/
+	margin-bottom: 0;
+	cursor: pointer;
+}
+.accordion-div > p
+{
+	display:none;
+}
+.accordion-content
+{
+	margin-top: 0;
+	/*padding-top: 0;*/
+	border: 1px solid green;
 }

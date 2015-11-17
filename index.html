@@ -12,7 +12,7 @@
 	<h1> Miguel Rondon </h1>
 	<div class="tabs">
 		<ul class="menu">
-			<li id="#home">HOME</li>
+			<li id="#home" class="selected">HOME</li>
 			<li id="#projects">PROJECTS</li>
 			<li id="#about">ABOUT</li>
 			<li id="#contact">CONTACT</li>
@@ -21,17 +21,29 @@
 </div>
 
 <div class="container">
-	<div class="content" id="home">
-		Home
+	<div class="content cs" id="home">
+		<h2>Home</h2>
 	</div>
 	<div class="content" id="projects">
-		Projects
+		<h2>Projects</h2>
+		<div class="accordion-div">
+			<h3 class="accordion-head">PatientDoctor</h3>
+				<p class="accordion-content">Description</p>
+		</div>
+		<div class="accordion-div">
+			<h3 class="accordion-head">MaterialTracker</h3>
+				<p class="accordion-content">Description</p>
+		</div>
+		<div class="accordion-div">
+			<h3 class="accordion-head">TestGenerator</h3>
+				<p class="accordion-content">Description</p>
+		</div>
 	</div>
 	<div class="content" id="about">
-		About
+		<h2>About</h2>
 	</div>
 	<div class="content" id="contact">
-		Contact
+		<h2>Contact</h2>
 	</div>
 </div>
 
@@ -39,15 +51,24 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
+
 <script>
+//Tabs
 jQuery(document).ready(function(){
 	jQuery('li').on('click', function(){
 		var id = jQuery(this).attr('id');
 		jQuery(this).toggleClass('selected').siblings().removeClass('selected');
-		jQuery('.content' + id).toggle().siblings().hide();
-
+		jQuery(id).toggleClass('cs').siblings().removeClass('cs')
 	});
 });
 </script>
-
+<script>
+//Accordion Projects
+jQuery(document).ready(function(){
+	jQuery('h3').on('click', function(){
+		jQuery(this).parent().siblings().children('p').hide();
+		jQuery(this).siblings().toggle();
+	})
+})
+</script>
 </html>
