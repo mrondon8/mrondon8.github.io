@@ -1,13 +1,16 @@
 .header
 {
-	background: lightblue;
+	/*background: lightblue;*/
 	text-align: center;
+	color: black;
+	/*background: black;*/
+	padding-bottom: 10px;
 }
 .tabs
 {
-	width: 460px;
+	width: 620px;
 	margin: auto;
-	border: 1px solid blue;
+	/*border: 1px solid blue;*/
 }
 .menu
 {
@@ -22,9 +25,16 @@
 	display: inline-block;
 	/*float: left;*/
 	width: 150px;
+	height: 30px;
+	border: 1px solid black;
+	padding-top: 15px;
 }
 .menu > li:hover
 {
 	background: yellow;
 	cursor: pointer;
+}
+.container
+{
+	text-align: center;
 }
