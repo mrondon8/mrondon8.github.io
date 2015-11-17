@@ -1,3 +1,7 @@
+body
+{
+	background-color: lightblue;
+}
 .header
 {
 	/*background: lightblue;*/
@@ -34,7 +38,19 @@
 	background: yellow;
 	cursor: pointer;
 }
+.selected
+{
+	background: yellow;
+}
 .container
 {
 	text-align: center;
+}
+.content
+{
+	display: none;
+	height: 700px;
+	width: 620px;
+	margin: auto;
+	border: 1px solid black;
 }
