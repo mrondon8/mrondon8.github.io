@@ -7,6 +7,7 @@
 
 <body>
 
+<div class="wrapper">
 
 <div class="header">
 	<h1> Miguel Rondon </h1>
@@ -23,34 +24,69 @@
 <div class="container">
 	<div class="content cs" id="home">
 		<h2>Home</h2>
+		<br><br><br><br><br>
+		<pre> 
+Todo:
+Home Message
+Contact Me Information
+Picture
+Styling
+		</pre>
 	</div>
 	<div class="content" id="projects">
 		<h2>Projects</h2>
-		<div class="accordion-div">
-			<h3 class="accordion-head">PatientDoctor</h3>
-				<p class="accordion-content">Description</p>
-		</div>
+
 		<div class="accordion-div">
 			<h3 class="accordion-head">MaterialTracker</h3>
-				<p class="accordion-content">Description</p>
+			<div class="accordion-content">
+				<p>The Material e-Tracker is a tool to allow users to keep track of materials from one place to another. Thousands of materials are moved between warehouses, sales-units, and outlets. Certain materials required approval from a warehouse manager in order to be moved with a built in email alert system that handled the approval notification process. The system enabled users to track up-to-date location on the materials.</p>
+				<img src="imgs/GMFlow.jpg">
+			</div>
 		</div>
+
+		<div class="accordion-div">
+			<h3 class="accordion-head">PatientDoctor</h3>
+			<div class="accordion-content">
+				<p>This system allows patients that are registered to doctors to schedule an appointment with them, along with providing them with a plethora of information. This tool also allows the doctors to see the requested appointment and whether to approve it or not. If approved the tool sends an e-mail to the patient about their confirmed appointment.</p>
+				<img src="imgs/PatientDoctorFlow.jpg">
+			</div>
+		</div>
+
 		<div class="accordion-div">
 			<h3 class="accordion-head">TestGenerator</h3>
-				<p class="accordion-content">Description</p>
+			<div class="accordion-content">
+				<p>Description</p>
+			</div>
 		</div>
+
 	</div>
 	<div class="content" id="about">
 		<h2>About</h2>
+		<p>I am a software developer with extensive knowledge of OOP, Java SE and Java EE design concepts. My experience encapsulates technologies such as JUnit, JavaScript, WebServices (SOAP and REST), Struts, UML, SQL, Oracle SQL, Weblogic, jQuery, AngularJS, HTML, XML, SpringMVC, Hibernate, CSS, and Tomcat. I am familiar with creational design patterns such as Factory Method, Lazy initialization, Object pool, and Singleton. Furthermore, I have used the structural design patterns Front Controller and Module. I consider myself a very detail oriented team player that is always looking forward to new challenges.</p>
 	</div>
 	<div class="content" id="contact">
 		<h2>Contact</h2>
 	</div>
 </div>
 
+
+	<ul class="bg-bubbles">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+
+</div>
 </body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-
 
 <script>
 //Tabs
@@ -58,7 +94,7 @@ jQuery(document).ready(function(){
 	jQuery('li').on('click', function(){
 		var id = jQuery(this).attr('id');
 		jQuery(this).toggleClass('selected').siblings().removeClass('selected');
-		jQuery(id).toggleClass('cs').siblings().removeClass('cs')
+		jQuery(id).toggleClass('cs').siblings().removeClass('cs');
 	});
 });
 </script>
@@ -66,9 +102,9 @@ jQuery(document).ready(function(){
 //Accordion Projects
 jQuery(document).ready(function(){
 	jQuery('h3').on('click', function(){
-		jQuery(this).parent().siblings().children('p').hide();
+		jQuery(this).parent().siblings().children('div').hide();
 		jQuery(this).siblings().toggle();
-	})
-})
+	});
+});
 </script>
 </html>
