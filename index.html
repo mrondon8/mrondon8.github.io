@@ -66,6 +66,8 @@ Styling
 	</div>
 	<div class="content" id="contact">
 		<h2>Contact</h2>
+		<p> Phone: 703-828-4516 </p>
+		<p> Email: mrondon008@gmail.com </p>
 	</div>
 </div>
 
@@ -91,7 +93,7 @@ Styling
 <script>
 //Tabs
 jQuery(document).ready(function(){
-	jQuery('li').on('click', function(){
+	jQuery('.header li').on('click', function(){
 		var id = jQuery(this).attr('id');
 		jQuery(this).toggleClass('selected').siblings().removeClass('selected');
 		jQuery(id).toggleClass('cs').siblings().removeClass('cs');
