@@ -91,6 +91,10 @@ body
 	margin-bottom: 0;
 	cursor: pointer;
 }
+.accordion-div
+{
+  margin-bottom: 20px;
+}
 .accordion-div > div
 {
 	display:none;
